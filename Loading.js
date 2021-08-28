@@ -7,7 +7,7 @@ export default function Loading() {
         <View style={styles.container}>
             <StatusBar barStyle="dark-content"/>
 
-            <Text style={styles.text}>Getting the fucking weather</Text>
+            <Text style={styles.text}>Get today's weather</Text>
         </View>
     );
 }
