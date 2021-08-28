@@ -106,22 +106,23 @@ const weatherOptions = {
 export default function Weather({temp, condition}){
     return (
             <LinearGradient
-                colors = {weatherOptions[condition].gradient}
+                // colors = {weatherOptions[condition].gradient}
+                colors = {weatherOptions["Clear"].gradient}
                 style={styles.container}>
 
-            <StatusBar barStyle='dark-content'/>
+            <StatusBar barStyle='light-content'/>
             
             <View style={styles.halfContainer}>
                 
                 <MaterialCommunityIcons size={96} 
-                name={weatherOptions[condition].iconName}
-                color="black"/>
+                name={weatherOptions["Clear"].iconName}
+                color="white"/>
                 <Text style={styles.temp}>{temp}°</Text>
             </View>
             <View  style={{ ...styles.halfContainer, ...styles.textContainer}}/>
-            <Text style={styles.title}>{weatherOptions[condition].title}</Text>
+            <Text style={styles.title}>{weatherOptions["Clear"].title}</Text>
                 <Text style={styles.subtitle}>
-                    {weatherOptions[condition].subtitle}
+                    {weatherOptions["Clear"].subtitle}
                 </Text>
             </LinearGradient>
     );
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
     },
     temp: {
        fontSize: 42,
-       color:"black"
+       color:"white"
     },
     halfContainer: {
         flex: 6,
@@ -163,7 +164,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     title: {
-        color: "black",
+        color: "white",
         fontSize: 44,
         fontWeight: "300",
         // marginBottom: 10,
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
     subtitle: {
-        color: "black",
+        color: "white",
         fontSize: 24,
         fontWeight: "600",
         marginLeft: 30,
